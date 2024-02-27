@@ -3,11 +3,12 @@
     {
         actionName: "onActionZKEditOnline",
         fn: function ZK_onActionZKEditOnline(file) {
-                var davProtocol = "vnd.sun.star.webdav";
+                var protocol = "open-locally";
                 if(window.location.protocol.indexOf("https") != -1){
-                  davProtocol = "vnd.sun.star.webdavs";
+                  protocol = "open-locally";
         	}
-          	webdavPath = davProtocol+"://"+ window.location.host + "/alfresco"+ file.webdavUrl;
+            filePath = file.webdavUrl.replace('/webdav', '');
+            webdavPath = protocol+"://"+ window.location.host + "/alfresco?file=A%3A"+ filePath;
         	window.location = webdavPath;
         }
     });
