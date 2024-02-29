@@ -2,15 +2,16 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>net.zylk</groupId>
-    <artifactId>zk-libreoffice-addon-share</artifactId>
+    <groupId>ua.com.fedorow</groupId>
+    <artifactId>open-locally-addon-share</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <name>Edit online with Libreoffice</name>
+    <name>Open from loccal drive</name>
+
     <packaging>amp</packaging>
     
     <!--<packaging>jar</packaging>-->
 
-    <description>Edit online with Libreoffice (Alfresco Share Module Package)</description>
+    <description>The module add action which open document from locally mapped WebDAV drive A: with default local application (Alfresco Share Module Package)</description>
 
     <parent>
         <groupId>org.alfresco.maven</groupId>

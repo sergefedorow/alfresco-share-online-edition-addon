@@ -1,8 +1,8 @@
 (function() {
     YAHOO.Bubbling.fire("registerAction",
     {
-        actionName: "onActionZKEditOnline",
-        fn: function ZK_onActionZKEditOnline(file) {
+        actionName: "onActionOpenLocally",
+        fn: function ZK_onActionOpenLocally(file) {
                 var protocol = "open-locally";
                 if(window.location.protocol.indexOf("https") != -1){
                   protocol = "open-locally";

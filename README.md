@@ -1,62 +1,38 @@
-# Edit with Libreoffice in Alfresco Share
+# Open document in default Windows application from mapped drive
 
-Edit with Libreoffice addon provides a webdav link for online edition of both MS-Office and Libreoffice mimetypes
+⚠️ **Warning:** The repository is not completed.
+
+Open locally addon add button into Document Actions which provide a link of the document to local drive A: The protocol in the link allows to open the document of any mimetype, registered in local client machine with default application.
 
 ## Using
 
-![Edit with Libreoffice Action](screenshots/EditWithLibreOffice.png)
-
-## Releases 
-
-Version 0.3
- * For Libreoffice 5.1 and Alfresco 4.x and 5.x, based on vnd.sun.star.webdav(s) url schemes
- 
-Version 0.2
- * For Libreoffice 4.x and Alfresco 4.x, based on dav:// and davs:// url schemes
-
-https://github.com/zylklab/alfresco-share-online-edition-addon/releases
+![Edit locally Action](screenshots/EditLocally.png)
 
 ## Packaging
 
 You may pack it with maven. Go into the directory that you unzipped, or cloned via git:
 
-    $ git clone https://github.com/zylklab/alfresco-share-online-edition-addon
-    $ cd alfresco-share-online-edition-addon
+    $ git clone https://github.com/sergefedorow/alfresco-share-open-locally-addon
+    $ cd alfresco-share-open-locally-addon
     $ mvn clean
     $ mvn package -DskipTests=true
 
-You will generate an Alfresco Share AMP package in target directory. 
-
-HINT: You also may download a JAR file from releases page to be deployed in $TOMCAT/shared/lib
+You will generate an Alfresco Share AMP package in the target directory. 
 
 ## Installation
 
- - Just copy the corresponding AMP into $ALF_HOME/amps_share, stop Alfresco service, apply AMPs script ($ALF_HOME/bin/apply_amps.sh). Then start Alfresco service. 
+### Install module on the server
 
-### Registering the protocols
+Install AMP module into Share application. Read Alfresco documentation on how to install AMP.
 
-Finally you will need to register the protocol in Windows or Linux according instrucctions and scripts.
+### On the clients Windows machines
 
-### Windows
+1. In Windows register the 'open-locally' protocol and add a protocol handler (not provided here).
 
-Wiki documentation:
-  * https://github.com/zylklab/alfresco-share-online-edition-addon/wiki#registering-the-dav-protocol-in-windows
- 
-NOTE: You can find a register script for Windows in release page.
-
-### Linux
-
-Wiki documentation:
-  * https://github.com/zylklab/alfresco-share-online-edition-addon/wiki#registering-the-dav-protocol-in-linux
- 
-NOTE: You can register the protocols in Linux with the help of this article:
-  * http://www.zylk.net/es/web/guest/web-2-0/blog/-/blogs/online-edition-with-libreoffice-in-alfresco-5
-
-### MacOSX
-
-Not working in MacOSX. More info at:
-  * https://github.com/zylklab/alfresco-share-online-edition-addon/issues/6
+2. Map network drive A: to http://<your.alfresco.domain>/alfresco/aos
+3. Optionaly. Configure client browser to apply protocol from your Alfresco server and run the handler without annoying warnings or messages.
 
 ## Authors
- * Patricia Yague
- * Cesar Capillas
+ * Patricia Yague (forked source)
+ * Cesar Capillas (forked source)
+ * Serge Fedorow
